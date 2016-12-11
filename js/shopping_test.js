@@ -22,4 +22,9 @@ describe('ShoppingListItem', () => {
     console.log(listItem.should.have.property('description'))
   })
 
+  it('should have a property of is_done', () => {
+    listItem.should.have.property('is_done');
+    console.log(listItem.should.have.property('is_done'))
+  })
+
 });
