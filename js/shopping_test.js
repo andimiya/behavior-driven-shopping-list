@@ -27,4 +27,8 @@ describe('ShoppingListItem', () => {
     console.log(listItem.should.have.property('is_done'))
   })
 
+  it('check should be a method', () => {
+    listItem.check.should.be.a.function;
+  })
+
 });

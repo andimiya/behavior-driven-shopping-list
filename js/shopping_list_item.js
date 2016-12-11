@@ -3,7 +3,12 @@ class ShoppingListItem {
     this.name = name;
     this.description = description;
     this.is_done = is_done;
-
 	}
+
+  check() {
+    this.is_done = true;
+    return this.is_done
+  }
+
 }
 
