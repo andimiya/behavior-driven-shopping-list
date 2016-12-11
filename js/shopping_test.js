@@ -8,6 +8,13 @@ const expect = chai.should();
 describe('ShoppingListItem', () => {
 	let listItem = new ShoppingListItem();
 	it('should be a class', () => {
-		ShoppingListItem.should.be.a.function;
+		listItem.should.be.a.function;
 	})
+
+  it('should have a property of name', () => {
+    let listItem = new ShoppingListItem();
+    listItem.should.have.property('name');
+    console.log(listItem.should.have.property('name'))
+  })
+
 });
