@@ -3,7 +3,7 @@ console.log('**chai**', chai);
 console.log('**describe**', describe);
 
 const should = chai.should();
-const expect = chai.should();
+const expect = chai.expect();
 
 describe('ShoppingListItem', () => {
 	let listItem = new ShoppingListItem();
@@ -30,5 +30,10 @@ describe('ShoppingListItem', () => {
   it('check should be a method', () => {
     listItem.check.should.be.a.function;
   })
+
+  it('is_done should be set to true', () => {
+    listItem.check.should.equal(true);
+  })
+  console.log(listItem.check)
 
 });
