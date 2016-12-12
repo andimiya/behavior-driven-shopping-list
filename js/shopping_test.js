@@ -77,7 +77,7 @@ describe('ShoppingList', () => {
 
   describe('addItem', () => {
     let list = new ShoppingList();
-    list.addItem('Avocado');
+    list.addItem();
 
     it('addItem should be a function', () => {
       list.addItem.should.be.a.function;
