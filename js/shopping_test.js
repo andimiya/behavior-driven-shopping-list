@@ -53,3 +53,14 @@ describe('uncheck', () => {
   console.log(listItem.is_done, 'listItem is done')
 
 });
+
+describe('render', () => {
+  let listItem = new ShoppingListItem('Avocado', 'Must be eaten immediately.', true);
+  listItem.render();
+
+  it('render should construct and return an html formatted string', () => {
+    listItem.render.should.be.a.string;
+    console.log(listItem.render, 'listItem render')
+  })
+
+})
