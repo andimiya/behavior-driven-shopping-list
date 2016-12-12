@@ -17,7 +17,6 @@ class ShoppingListItem {
 
   render() {
     var renderToString = `<ul>\n<li class='completed_${this.is_done}'>\n<span>${this.name}</span>\n<span>${this.description}</span>\n</li>\n</ul>`
-    console.log(renderToString, 'renderToString');
     return renderToString;
   }
 

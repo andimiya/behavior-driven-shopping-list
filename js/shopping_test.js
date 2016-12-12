@@ -57,7 +57,6 @@ describe('render', () => {
 
   it('render should construct and return an html formatted string', () => {
     listItem.render.should.be.a.string;
-    console.log(listItem.render, 'listItem render')
   })
 
 })
@@ -69,4 +68,7 @@ describe('ShoppingList', () => {
     list.should.be.a.function;
   })
 
+  it('should have a property named items', () => {
+    list.should.have.property('items');
+  })
 })
