@@ -71,4 +71,11 @@ describe('ShoppingList', () => {
   it('should have a property named items', () => {
     list.should.have.property('items');
   })
+
+  it('items should be set to an empty array', () => {
+    list.items.should.be.empty;
+
+  })
+  console.log(list.items, 'listitemsdescrbie')
+
 })

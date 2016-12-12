@@ -24,6 +24,7 @@ class ShoppingListItem {
 
 class ShoppingList {
   constructor(items) {
-    this.items = items;
+    this.items = [];
+    console.log(this.items, 'this items');
   }
 }
