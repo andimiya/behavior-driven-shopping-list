@@ -14,17 +14,14 @@ describe('ShoppingListItem', () => {
 
   it('should have a property of name', () => {
     listItem.should.have.property('name');
-    console.log(listItem.should.have.property('name'))
   })
 
   it('should have a property of description', () => {
     listItem.should.have.property('description');
-    console.log(listItem.should.have.property('description'))
   })
 
   it('should have a property of is_done', () => {
     listItem.should.have.property('is_done');
-    console.log(listItem.should.have.property('is_done'))
   })
 });
 
@@ -38,6 +35,19 @@ describe('check', () => {
 
   it('is_done should be set to true', () => {
     listItem.is_done.should.equal(true);
+  })
+});
+
+describe('uncheck', () => {
+  let listItem = new ShoppingListItem();
+  listItem.uncheck();
+
+  it('uncheck should be a method', () => {
+    listItem.check.should.be.a.function;
+  })
+
+  it('is_done should be set to false', () => {
+    listItem.is_done.should.equal(false);
   })
 
   console.log(listItem.is_done, 'listItem is done')
