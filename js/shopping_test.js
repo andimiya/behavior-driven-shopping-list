@@ -26,14 +26,20 @@ describe('ShoppingListItem', () => {
     listItem.should.have.property('is_done');
     console.log(listItem.should.have.property('is_done'))
   })
+});
+
+describe('check', () => {
+  let listItem = new ShoppingListItem();
+  listItem.check();
 
   it('check should be a method', () => {
     listItem.check.should.be.a.function;
   })
 
   it('is_done should be set to true', () => {
-    listItem.check.should.equal(true);
+    listItem.is_done.should.equal(true);
   })
-  console.log(listItem.check)
+
+  console.log(listItem.is_done, 'listItem is done')
 
 });
