@@ -29,6 +29,13 @@ class ShoppingList {
 
   addItem(ShoppingListItem){
     this.items.push(ShoppingListItem);
-    console.log(this.items, 'this items');
+    console.log(this.items, 'additem');
+  }
+
+  removeItem(ShoppingListItem){
+    if(this.items.indexOf(ShoppingListItem) > -1) {
+      this.items.splice(this.items.indexOf(ShoppingListItem), 1);
+    }
+    console.log(this.items, 'removeItem');
   }
 }

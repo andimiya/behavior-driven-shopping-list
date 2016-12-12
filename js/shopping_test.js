@@ -77,11 +77,26 @@ describe('ShoppingList', () => {
 
   describe('addItem', () => {
     let list = new ShoppingList();
-    list.addItem();
+    list.addItem('Avocado');
 
     it('addItem should be a function', () => {
       list.addItem.should.be.a.function;
     })
+
+    it('addItem should have a property named ShoppingListItem', () => {
+      list.addItem.should.have.property('ShoppingListItem');
+    })
+
+  })
+
+  describe('removeItem', () => {
+    let list = new ShoppingList();
+    list.removeItem('Avocado');
+
+    it('removeItem should be a function', () => {
+      list.removeItem.should.be.a.function;
+    })
+
   })
 
 })
