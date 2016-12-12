@@ -23,3 +23,8 @@ class ShoppingListItem {
 
 }
 
+class ShoppingList {
+  constructor(items) {
+    this.items = items;
+  }
+}

@@ -49,9 +49,6 @@ describe('uncheck', () => {
   it('is_done should be set to false', () => {
     listItem.is_done.should.equal(false);
   })
-
-  console.log(listItem.is_done, 'listItem is done')
-
 });
 
 describe('render', () => {
@@ -61,6 +58,15 @@ describe('render', () => {
   it('render should construct and return an html formatted string', () => {
     listItem.render.should.be.a.string;
     console.log(listItem.render, 'listItem render')
+  })
+
+})
+
+describe('ShoppingList', () => {
+  let list = new ShoppingList();
+
+  it('ShoppingList should be a function', () => {
+    list.should.be.a.function;
   })
 
 })
