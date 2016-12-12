@@ -25,6 +25,10 @@ class ShoppingListItem {
 class ShoppingList {
   constructor(items) {
     this.items = [];
+  }
+
+  addItem(ShoppingListItem){
+    this.items.push(ShoppingListItem);
     console.log(this.items, 'this items');
   }
 }

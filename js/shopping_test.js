@@ -23,43 +23,42 @@ describe('ShoppingListItem', () => {
   it('should have a property of is_done', () => {
     listItem.should.have.property('is_done');
   })
+
+  describe('check', () => {
+    let listItem = new ShoppingListItem();
+    listItem.check();
+
+    it('check should be a method', () => {
+      listItem.check.should.be.a.function;
+    })
+
+    it('is_done should be set to true', () => {
+      listItem.is_done.should.equal(true);
+    })
+  });
+
+  describe('uncheck', () => {
+    let listItem = new ShoppingListItem();
+    listItem.uncheck();
+
+    it('uncheck should be a method', () => {
+      listItem.check.should.be.a.function;
+    })
+
+    it('is_done should be set to false', () => {
+      listItem.is_done.should.equal(false);
+    })
+  });
+
+  describe('render', () => {
+    let listItem = new ShoppingListItem('Avocado', 'Must be eaten immediately.', true);
+    listItem.render();
+
+    it('render should construct and return an html formatted string', () => {
+      listItem.render.should.be.a.string;
+    })
+  })
 });
-
-describe('check', () => {
-  let listItem = new ShoppingListItem();
-  listItem.check();
-
-  it('check should be a method', () => {
-    listItem.check.should.be.a.function;
-  })
-
-  it('is_done should be set to true', () => {
-    listItem.is_done.should.equal(true);
-  })
-});
-
-describe('uncheck', () => {
-  let listItem = new ShoppingListItem();
-  listItem.uncheck();
-
-  it('uncheck should be a method', () => {
-    listItem.check.should.be.a.function;
-  })
-
-  it('is_done should be set to false', () => {
-    listItem.is_done.should.equal(false);
-  })
-});
-
-describe('render', () => {
-  let listItem = new ShoppingListItem('Avocado', 'Must be eaten immediately.', true);
-  listItem.render();
-
-  it('render should construct and return an html formatted string', () => {
-    listItem.render.should.be.a.string;
-  })
-
-})
 
 describe('ShoppingList', () => {
   let list = new ShoppingList();
@@ -74,8 +73,15 @@ describe('ShoppingList', () => {
 
   it('items should be set to an empty array', () => {
     list.items.should.be.empty;
-
   })
-  console.log(list.items, 'listitemsdescrbie')
+
+  describe('addItem', () => {
+    let list = new ShoppingList();
+    list.addItem();
+
+    it('addItem should be a function', () => {
+      list.addItem.should.be.a.function;
+    })
+  })
 
 })
