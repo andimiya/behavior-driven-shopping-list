@@ -19,7 +19,6 @@ class ShoppingListItem {
     var renderToString = `<ul>\n<li class='completed_${this.is_done}'>\n<span>${this.name}</span>\n<span>${this.description}</span>\n</li>\n</ul>`
     return renderToString;
   }
-
 }
 
 class ShoppingList {
@@ -33,11 +32,11 @@ class ShoppingList {
     console.log(this.items, 'additem');
   }
 
-  // removeItem(ShoppingListItem){
+  removeItem(ShoppingListItem){
 
-  //   if(this.items.indexOf(ShoppingListItem) > -1) {
-  //     this.items.splice(this.items.indexOf(ShoppingListItem), 1);
-  //   }
-  //   console.log(this.items, 'removeItem');
-  // }
+    if(this.items.indexOf(ShoppingListItem) > -1) {
+      this.items.splice(this.items.indexOf(ShoppingListItem), 1);
+    }
+    console.log(this.items, 'removeItem');
+  }
 }
