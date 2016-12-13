@@ -1,3 +1,5 @@
+ /*jshint esversion: 6 */
+
 console.log('**mocha**', mocha);
 console.log('**chai**', chai);
 console.log('**describe**', describe);
@@ -10,19 +12,19 @@ describe('ShoppingListItem', () => {
 
 	it('should be a class', () => {
 		listItem.should.be.a.function;
-	})
+	});
 
   it('should have a property of name', () => {
     listItem.should.have.property('name');
-  })
+  });
 
   it('should have a property of description', () => {
     listItem.should.have.property('description');
-  })
+  });
 
   it('should have a property of is_done', () => {
     listItem.should.have.property('is_done');
-  })
+  });
 
   describe('check', () => {
     let listItem = new ShoppingListItem();
@@ -30,11 +32,11 @@ describe('ShoppingListItem', () => {
 
     it('check should be a method', () => {
       listItem.check.should.be.a.function;
-    })
+    });
 
     it('is_done should be set to true', () => {
       listItem.is_done.should.equal(true);
-    })
+    });
   });
 
   describe('uncheck', () => {
@@ -43,11 +45,11 @@ describe('ShoppingListItem', () => {
 
     it('uncheck should be a method', () => {
       listItem.check.should.be.a.function;
-    })
+    });
 
     it('is_done should be set to false', () => {
       listItem.is_done.should.equal(false);
-    })
+    });
   });
 
   describe('render', () => {
@@ -56,8 +58,8 @@ describe('ShoppingListItem', () => {
 
     it('render should construct and return an html formatted string', () => {
       listItem.render.should.be.a.string;
-    })
-  })
+    });
+  });
 });
 
 describe('ShoppingList', () => {
@@ -65,15 +67,15 @@ describe('ShoppingList', () => {
 
   it('ShoppingList should be a function', () => {
     list.should.be.a.function;
-  })
+  });
 
   it('should have a property named items', () => {
     list.should.have.property('items');
-  })
+  });
 
   it('items should be set to an empty array', () => {
     list.items.should.be.empty;
-  })
+  });
 
   describe('addItem', () => {
     let list = new ShoppingList();
@@ -81,13 +83,21 @@ describe('ShoppingList', () => {
 
     it('addItem should be a function', () => {
       list.addItem.should.be.a.function;
-    })
+    });
 
     it('addItem should have a property named ShoppingListItem', () => {
-      list.addItem.should.have.property('ShoppingListItem');
-    })
+      list.should.have.property('ShoppingListItem');
+    });
 
-  })
+    it('ShoppingListItem should be added to items array', () => {
+      list.should.include.keys('ShoppingListItem');
+    });
+
+    // it('addItem should throw error if not ShoppingListItem', () => {
+    // list.should.throw('Not a ShoppingListItem');
+    // });
+
+  });
 
   describe('removeItem', () => {
     let list = new ShoppingList();
@@ -95,8 +105,8 @@ describe('ShoppingList', () => {
 
     it('removeItem should be a function', () => {
       list.removeItem.should.be.a.function;
-    })
+    });
 
-  })
+  });
 
-})
+});
