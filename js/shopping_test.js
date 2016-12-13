@@ -3,100 +3,11 @@ console.log('**chai**', chai);
 console.log('**describe**', describe);
 
 const should = chai.should();
-const expect = chai.expect();
+const expect = chai.should();
 
 describe('ShoppingListItem', () => {
 	let listItem = new ShoppingListItem();
-
 	it('should be a class', () => {
-		listItem.should.be.a.function;
+		ShoppingListItem.should.be.a.function;
 	})
-
-  it('should have a property of name', () => {
-    listItem.should.have.property('name');
-  })
-
-  it('should have a property of description', () => {
-    listItem.should.have.property('description');
-  })
-
-  it('should have a property of is_done', () => {
-    listItem.should.have.property('is_done');
-  })
-
-  describe('check', () => {
-    let listItem = new ShoppingListItem();
-    listItem.check();
-
-    it('check should be a method', () => {
-      listItem.check.should.be.a.function;
-    })
-
-    it('is_done should be set to true', () => {
-      listItem.is_done.should.equal(true);
-    })
-  });
-
-  describe('uncheck', () => {
-    let listItem = new ShoppingListItem();
-    listItem.uncheck();
-
-    it('uncheck should be a method', () => {
-      listItem.check.should.be.a.function;
-    })
-
-    it('is_done should be set to false', () => {
-      listItem.is_done.should.equal(false);
-    })
-  });
-
-  describe('render', () => {
-    let listItem = new ShoppingListItem('Avocado', 'Must be eaten immediately.', true);
-    listItem.render();
-
-    it('render should construct and return an html formatted string', () => {
-      listItem.render.should.be.a.string;
-    })
-  })
 });
-
-describe('ShoppingList', () => {
-  let list = new ShoppingList();
-
-  it('ShoppingList should be a function', () => {
-    list.should.be.a.function;
-  })
-
-  it('should have a property named items', () => {
-    list.should.have.property('items');
-  })
-
-  it('items should be set to an empty array', () => {
-    list.items.should.be.empty;
-  })
-
-  describe('addItem', () => {
-    let list = new ShoppingList();
-    list.addItem();
-
-    it('addItem should be a function', () => {
-      list.addItem.should.be.a.function;
-    })
-
-    it('addItem should have a property named ShoppingListItem', () => {
-      list.addItem.should.have.property('ShoppingListItem');
-    })
-
-  })
-
-  describe('removeItem', () => {
-    let list = new ShoppingList();
-    list.removeItem('Avocado');
-
-    it('removeItem should be a function', () => {
-      list.removeItem.should.be.a.function;
-    })
-
-  })
-
-})
