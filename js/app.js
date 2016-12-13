@@ -1,12 +1,15 @@
-// // (function(window){
+var listItem = new ShoppingListItem('Avocado', 'is Squishy', true);
 
-// const ShoppingList = require('/ShoppingList');
+var renderListItem = listItem.render()
+document.getElementById('content').innerHTML = renderListItem;
 
+console.log('test', listItem);
 
-// var shoppingList = new ShoppingListItem()
+class add_to_shopping_list extends ShoppingListItem {
+  constructor (title, desciption) {
+    super(title, desciption);
+  }
+}
 
+  // var new_shopping_list_item =
 
-
-// console.log('test')
-
-// // }(window));
