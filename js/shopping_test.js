@@ -93,9 +93,9 @@ describe('ShoppingList', () => {
       list.should.include.keys('ShoppingListItem');
     });
 
-    // it('addItem should throw error if not ShoppingListItem', () => {
-    // list.should.throw('Not a ShoppingListItem');
-    // });
+    it('addItem should throw error if invalid ShoppingListItem', () => {
+    list.addItem('Not a ShoppingListItem').should.throw(Error);
+    });
 
   });
 
@@ -105,6 +105,10 @@ describe('ShoppingList', () => {
 
     it('removeItem should be a function', () => {
       list.removeItem.should.be.a.function;
+    });
+
+    it('removeItem should remove item from array', () => {
+      list.should.not.include.keys('ShoppingListItem');
     });
 
   });
