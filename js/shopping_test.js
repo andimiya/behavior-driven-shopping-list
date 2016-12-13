@@ -108,7 +108,11 @@ describe('ShoppingList', () => {
     });
 
     it('removeItem should remove item from array', () => {
-      list.should.not.include.keys('ShoppingListItem');
+      list.removeItem.should.not.include.keys('ShoppingListItem');
+    });
+
+    it('removeItem should remove last item in array if any', () => {
+      list.removeItem.should.be.empty;
     });
 
   });
