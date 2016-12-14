@@ -1,13 +1,9 @@
 
-
-var renderListItem = listItem.render();
-document.getElementById('content').innerHTML = renderListItem;
-
 //Create an add_to_shopping_list function that will read the value of the ShoppingListItem name and description fields
-
 
 // Invoke ShoppingList addItem() by passing in new_shopping_list_item
 // addShoppingListItem.addItem(new_shopping_list_item);
+let addItemVar = new ShoppingList();
 
 function add_to_shopping_list(name, description){
   var name = document.getElementById('title').value;
