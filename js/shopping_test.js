@@ -8,11 +8,11 @@ const should = chai.should();
 const expect = chai.expect();
 
 describe('ShoppingListItem', () => {
-	let listItem = new ShoppingListItem();
+  let listItem = new ShoppingListItem();
 
-	it('should be a class', () => {
-		listItem.should.be.a.function;
-	});
+  it('should be a class', () => {
+    listItem.should.be.a.function;
+  });
 
   it('should have a property of name', () => {
     listItem.should.have.property('name');
@@ -108,11 +108,7 @@ describe('ShoppingList', () => {
     });
 
     it('removeItem should remove item from array', () => {
-      list.removeItem.should.not.include.keys('ShoppingListItem');
-    });
-
-    it('removeItem should remove last item in array if any', () => {
-      list.removeItem.should.be.empty;
+      list.should.not.include.keys('ShoppingListItem');
     });
 
   });
