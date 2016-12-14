@@ -12,8 +12,7 @@ function add_to_shopping_list(name, description){
   addItemVar.addItem();
   console.log(new_shopping_list_item)
   var renderListItem = new_shopping_list_item.render();
-  document.getElementById('content').innerHTML = renderListItem;
-
+  document.getElementById('content').innerHTML += renderListItem;
 }
 
 
