@@ -12,5 +12,11 @@ class add_to_shopping_list extends ShoppingListItem {
     super(title, description);
     var new_shopping_list_item = [this.title, this.description];
     addList.addItem(new_shopping_list_item);
-     }
+  }
+}
+
+function changeCheckedStatus(idx, checkbox){
+	if(this.idx.indexOf(renderListItem) > -1){
+		console.log('sanity');
+	}
 }
