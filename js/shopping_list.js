@@ -15,6 +15,10 @@ class ShoppingList {
 
     if(this.items.indexOf(ShoppingListItem) > -1) {
       this.items.splice(this.items.indexOf(ShoppingListItem), 1);
+    }if(this.done === true){
+      listItem.check();
+    }else{
+      listItem.uncheck();
     }
     console.log(this.items, 'removeItem');
   }
