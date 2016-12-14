@@ -1,9 +1,9 @@
 class ShoppingListItem {
-	constructor (name, description, is_done) {
+  constructor (name, description, is_done) {
     this.name = name;
     this.description = description;
     this.is_done = is_done;
-	}
+  }
 
   check() {
     this.is_done = true;
@@ -15,8 +15,15 @@ class ShoppingListItem {
     return this.is_done;
   }
 
-  render() {
-    var renderToString = `<ul>\n<li class='completed_${this.is_done}'>\n<span>${this.name}</span>\n<span>${this.description}</span>\n</li>\n</ul>`
+
+//Modify the ShoppingListItem render() method to include a checkbox input
+  render(checkbox) {
+
+//Add an onchange event listener to this checkbox that will call function name changeCheckedStatus(idx, checkbox)
+
+//idx = position (array index) of the shoppingListItem
+//checkbox = actual checkbox element
+    var renderToString = `<br /><span class='completed_${this.is_done}'>\<n<span><input type="checkbox" id="check-box" onclick="changeCheckedStatus()"/></span>\n<span>${this.name}</span>\n<span>${this.description}</span>\n</span>`;
     return renderToString;
   }
 }
