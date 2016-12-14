@@ -39,21 +39,15 @@ function changeCheckedStatus(idx, checkbox){
   }
 }
 
+//Find a ShoppingListItem based on idx passed into the function
+//If idx is in the array of items then invoked removeItem method
+
+function removeItemButtonClicked(idx){
+  if(ShoppingList.ShoppingListItem.indexOf(idx) > -1){
+    addItemVar.removeItem(idx);
+  }
+}
 
 
 
 
-// function changeCheckedStatus(idx, checkbox){
-//  if(this.idx.indexOf(renderListItem) > -1){
-//    console.log('sanity');
-//  }
-// }
-
-
-// class add_to_shopping_list extends ShoppingListItem {
-//   constructor (name, description) {
-//     super(name, description);
-//     var new_shopping_list_item = [this.name, this.description];
-//     addList.addItem(new_shopping_list_item);
-//   }
-// }
