@@ -15,6 +15,7 @@ class ShoppingListItem {
     return this.is_done;
   }
 
+
 //Modify the ShoppingListItem render() method to include a checkbox input
   render(checkbox) {
 
