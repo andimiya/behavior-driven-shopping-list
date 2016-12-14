@@ -24,17 +24,18 @@ function add_to_shopping_list(name, description){
 //If checked, invoke shopping_list_item object's check() method
 //If not checked, invoke the shopping_list_item uncheck()method
 
+let changeCheck = new ShoppingListItem();
 
 function changeCheckedStatus(idx, checkbox){
   if (document.getElementById('check-box').checked === true)
   {
     console.log('yes');
-    addShoppingListItem.check();
+    changeCheck.check();
 
   }
   else {
     console.log('no');
-    addShoppingListItem.uncheck();
+    changeCheck.uncheck();
   }
 }
 
