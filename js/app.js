@@ -16,9 +16,6 @@ function add_to_shopping_list(name, description){
   document.getElementById('content').innerHTML += renderListItem;
 }
 
-
-
-
 //Find a ShoppingListItem based on the idx passed in to the function
 //Is the checkbox checked? or not checked?
 //If checked, invoke shopping_list_item object's check() method
@@ -26,34 +23,21 @@ function add_to_shopping_list(name, description){
 
 let changeCheck = new ShoppingListItem();
 
-function changeCheckedStatus(idx, checkbox){
+function changeCheckedStatus(){
   if (document.getElementById('check-box').checked === true)
   {
-    console.log('yes');
+    console.log('true');
     changeCheck.check();
 
   }
   else {
-    console.log('no');
+    console.log('false');
     changeCheck.uncheck();
   }
 }
 
-
-
-
-
-// function changeCheckedStatus(idx, checkbox){
-//  if(this.idx.indexOf(renderListItem) > -1){
-//    console.log('sanity');
-//  }
-// }
-
-
-// class add_to_shopping_list extends ShoppingListItem {
-//   constructor (name, description) {
-//     super(name, description);
-//     var new_shopping_list_item = [this.name, this.description];
-//     addList.addItem(new_shopping_list_item);
-//   }
-// }
+function removeItemButtonClicked(idx){
+   if(ShoppingList.ShoppingListItem.indexOf(idx) > -1){
+     addItemVar.removeItem(idx);
+   }
+ }

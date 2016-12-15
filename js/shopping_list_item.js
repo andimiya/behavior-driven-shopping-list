@@ -23,7 +23,15 @@ class ShoppingListItem {
 
 //idx = position (array index) of the shoppingListItem
 //checkbox = actual checkbox element
-    var renderToString = `<br /><span class='completed_${this.is_done}'>\<n<span><input type="checkbox" id="check-box" onclick="changeCheckedStatus()"/></span>\n<span>${this.name}</span>\n<span>${this.description}</span>\n</span>`;
+    var renderToString = `<br />
+    <span id="this_item${Math.random()}" class='completed_${this.is_done}'>\n
+    <span><input type="checkbox" id="check-box" onclick="changeCheckedStatus()"/></span>\n
+    <span>${this.name}</span>\n
+    <span>${this.description}</span>\n
+    </span>
+
+    <span><button id="removeItem" onclick="removeItemButtonClicked()">X</button></span>
+    `;
     return renderToString;
   }
 }
