@@ -8,7 +8,7 @@ class ShoppingList {
   addItem(ShoppingListItem){
     this.ShoppingListItem = ShoppingListItem;
     this.items.push(ShoppingListItem);
-    console.log(this.items, 'additem');
+    console.log(ShoppingListItem, 'additem');
   }
 
   removeItem(ShoppingListItem){
